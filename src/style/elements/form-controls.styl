@@ -1,0 +1,67 @@
+form
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+
+fieldset
+  padding: round((base-line / 2 ), 2)
+  overflow: hidden
+  standard-border: black
+  @media (prefers-color-scheme: dark)
+    standard-border: red
+  legend
+    color: lighten(black, 30%)
+    &.valid
+      color: green
+
+input
+  color: red
+  &[type=file]
+    display: none
+  &:focus
+    transition-property: all
+    outline: 0
+    &::placeholder
+      color: lighten(black, 30%)
+  &::placeholder
+    color: lighten(black, 30%)
+
+input
+textarea
+  border-color: transparent
+  background-color: transparent
+  &:disabled
+    opacity: 1
+    user-select: none
+    -webkit-text-fill-color: black
+    color: black
+
+input
+textarea
+[contenteditable]
+  user-select: text
+
+input
+textarea
+button
+  appearance:none
+  -webkit-tap-highlight-color: inherit
+  outline: inherit
+  text-rendering: inherit
+  font: inherit
+  font-family: inherit
+  font-size: inherit
+  font-weight: inherit
+  color: inherit
+
+label
+  font-weight: 300
+
+button
+  standard-button: green
+  &:focus
+    outline: 0.25px dashed green
+  &:disabled
+    opacity: .75
+    standard-button: black

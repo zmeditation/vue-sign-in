@@ -1,0 +1,47 @@
+@require 'variables'
+svg
+  transition-property: none
+  line-height: 0
+  pointer-events: visible
+  height: base-line * 1.5
+  width: base-line * 1.5
+  overflow: auto
+  outline:none
+  display: block
+  stroke-width: 0
+  fill: black-dark
+  & use:active
+    stroke-width: 2px
+    -webkit-user-select: all
+    animation-name: working
+    animation-timing-function: ease-in-out
+    animation-fill-mode: none
+    animation-direction: alternate-reverse
+    transition-property: padding, fill
+    transition-duration: 0.1s
+    transition-timing-function: ease-in
+svg.background
+  fill: transparent
+  @media (prefers-color-scheme: dark)
+    fill: blue
+svg.background
+use.working
+  position: absolute
+  z-index: 0
+svg.camera
+  width: base-line * 2.5
+  height: base-line * 2
+svg.working
+use.working
+  width: round(base-line * 3.3, 2)
+  height: base-line
+  margin: auto
+  animation-name: working
+  animation-timing-function: linear
+  animation-duration: 1.33s
+  animation-delay: 0.33s
+  animation-iteration-count: infinite
+@media (max-width: page-width), (max-height: page-width)
+  svg.fullscreen
+  use.fullscreen
+    visibility: hidden

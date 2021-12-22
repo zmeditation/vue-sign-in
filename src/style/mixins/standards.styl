@@ -1,0 +1,26 @@
+standard-border($color=currentColor, $dark-color=black-dark)
+  border: round((base-line / 7), 2) solid $color
+  border-radius: round((base-line / 3), 2)
+
+standard-button($color=currentColor, $dark-color=white)
+  standard-border: $color
+  padding: round((base-line / 2.33), 2)
+  border-radius: round((base-line / 1.33), 2)
+  line-height: 1
+  background-color: inherit
+  vertical-align: middle
+  text-transform: capitalize
+  text-align: center
+  font-weight: 300
+  cursor: pointer
+  color: $color
+  &:disabled
+    color: transparent
+  @media (prefers-color-scheme: dark)
+    color: $dark-color
+
+standard-grid($nothin=hi)
+  display: grid
+  grid-gap: base-line
+  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr))
+  grid-auto-flow: dense

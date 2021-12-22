@@ -1,0 +1,17 @@
+section.page
+  padding-top: env(safe-area-inset-top)
+  width: 100%
+  & > header
+    padding: base-line
+    display:flex
+    justify-content: space-between
+    z-index: 2
+    h1
+      line-height: 1
+      @media (prefers-color-scheme: dark)
+        color: blue
+  & > address
+    text-align: center
+    h1
+      @media (prefers-color-scheme: dark)
+        color: blue

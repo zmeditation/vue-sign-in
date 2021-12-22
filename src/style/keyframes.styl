@@ -1,0 +1,91 @@
+/* http://daneden.me/animate/ */
+@keyframes working
+  50%
+    fill: white-background
+    stroke: white-background
+
+@keyframes pulsing
+  50%
+    border-color: black-background
+
+
+@keyframes press
+  50%
+    fill: red
+    // -webkit-tap-highlight-color: red
+
+@keyframes press-hold
+  100%
+    // fill: blue
+    -webkit-tap-highlight-color: blue
+
+@keyframes absolute-slide-down
+  from
+    top: inset(top, -(base-line * 2))
+    left: inset(left)
+    transform: translate3d(0, -100%, 0)
+    visibility: visible
+  to
+    transform: translate3d(0, 0, 0)
+    position: absolute
+    top: inset(top)
+    left: inset(left)
+    @media (orientation: landscape)
+      left: base-line
+      top: 0
+@keyframes absolute-slide-up
+  from
+    transform: translate3d(0, 100%, 0)
+    visibility: visible
+  to
+    transform: translate3d(0, 0, 0)
+    position: absolute
+    bottom: base-line
+
+@keyframes slide-in-down
+  from
+    transform: translate3d(0, -100%, 0)
+    visibility: visible
+  to
+    transform: translate3d(0, 0, 0)
+@keyframes slide-in-up
+  from
+    transform: translate3d(0, 100%, 0)
+    visibility: visible
+  to
+    transform: translate3d(0, 0, 0)
+@keyframes slide-in-left
+  from
+    transform: translate3d(-100%, 0, 0)
+    visibility: visible
+  to
+    transform: translate3d(0, 0, 0)
+@keyframes slide-in-right
+  from
+    transform: translate3d(100%, 0, 0)
+    visibility: visible
+  to
+    transform: translate3d(0, 0, 0)
+@keyframes slide-out-right
+  from
+    transform: translate3d(0, 0, 0)
+  to
+    visibility: hidden
+    transform: translate3d(100%, 0, 0)
+@keyframes rotate
+  from
+    transform: rotate3d(0, 0, 1, -100deg)
+  to
+    transform: translate3d(0, 0, 0)
+@keyframes rotate-back
+  from
+    transform: rotate3d(0, 0, 1, 100deg)
+  to
+    transform: translate3d(0, 0, 0)
+@keyframes fade-in
+  from
+    opacity: 0
+    transform: translate3d(0, 25%, 0)
+  to
+    opacity: 1
+    transform: translate3d(0, 0%, 0)

@@ -1,0 +1,76 @@
+@require 'mixins'
+
+// https://nice-converter.com/color/hsla-to-rgba
+black             = hsla(300,  1%, 33%, 0.69)
+black-dark        = hsla(300,  1%, 2%, 0.99)
+black-background  = hsla(228, 9.8%, 6%, 0.97) // #151518
+black-transparent = hsla(228, 9.8%, 6%, 0.25) // #151518
+
+white             = hsla( 57, 13%, 88%, 0.9)
+white-text        = hsla( 57, 13%, 69%, 0.9)
+white-background  = hsla( 57, 41%, 69%, 0.2)
+white-poster      = hsl( 57, 13%, 88%)
+
+blue              = hsla(203, 58%, 57%, 0.69)
+green             = hsla(136, 47%, 57%, 0.69)
+red               = hsla(353, 83%, 57%, 0.69)
+yellow            = hsla(55, 94%, 54%, 0.69)
+orange            = hsla(37, 91%, 54%, 0.69)
+
+base-line = 1.333rem // smallest horizontal block of content
+
+// Modular scale. for small and larger screens
+// if you change the scales you'll need to recalculate when the are applied
+// so that the typography scales smoothly http://type-scale.com/
+min-modular = 1.250
+max-modular = 1.414
+
+min-font = 1.125rem
+max-font = 1.33rem
+
+// Media queries defining device types
+pad-begins = round(base-line * 26)
+typing-begins = round(base-line * 48)
+display-begins = round(base-line * 60)
+
+page-width = round(base-line * 22)
+
+poster-min-width = round(base-line * 10, 0)
+
+poster-grid-height = round(base-line * 22, 0)
+
+poster-feed-height = round((page-width), 2)
+
+:root
+  --black: black
+  --black-dark: hsla(300,  1%, 2%, 0.99)
+  --black-background: black-background
+  --black-transparent: black-transparent
+
+  --white: white
+  --white-text: white-text
+  --white-background: white-background
+  --white-poster: white-poster
+
+  --blue: blue
+  --green: green
+  --red: red
+  --yellow: yellow
+  --orange: orange
+
+  --base-line: base-line
+
+  --min-modular: min-modular
+  --max-modular: max-modular
+
+  --min-font: min-font
+  --max-font: max-font
+
+  --pad-begins: pad-begins
+  --typing-begins: typing-begins
+  --display-begins: display-begins
+  --page-width: page-width
+
+  --poster-min-width: poster-min-width
+  --poster-grid-height: poster-grid-height
+  --poster-feed-height: poster-feed-height
